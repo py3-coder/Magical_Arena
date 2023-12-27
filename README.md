@@ -9,7 +9,6 @@
 - [Introduction](#introduction)
 - [Features](#features)
 - [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
 - [Screenshots](#screenshots)
 - [Testing](#testing)
 - [Tech Stack](#tech-stack)
@@ -60,20 +59,6 @@ magical-arena/
 - **test/:**  Unit tests for the respective packages.
 - **assets/:** Contains .png images of Game Score for README.MD File
 
-
-## Getting Started 
-
-```
-# Clone the repository
-git clone https://github.com/py3-coder/magical-arena.git
-
-# Navigate to the project directory
-cd magical-arena
-
-# Run the main application
-go run cmd/main.go
-
-```
 
 ## Screenshots 
 
