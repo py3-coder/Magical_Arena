@@ -9,7 +9,6 @@ import (
 )
 
 func main() {
-	rand.Seed(time.Now().UnixNano())
 	customRand := rand.New(rand.NewSource(time.Now().UnixNano()))
 	playerA := player.NewPlayer(150, 5, 10)
 	playerB := player.NewPlayer(100, 10, 5)

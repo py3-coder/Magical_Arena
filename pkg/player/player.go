@@ -17,7 +17,7 @@ func (player *Player) IsAlive() bool {
 	return player.Health > 0
 }
 
-// IsAlive Check Player is still alive :
+// GetHealth to Check Player Health :
 func (player *Player) GetHealth() int {
 	return player.Health
 }

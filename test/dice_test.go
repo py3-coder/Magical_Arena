@@ -7,8 +7,8 @@ import (
 	"time"
 )
 
+
 func TestRoll(t *testing.T) {
-	rand.Seed(time.Now().UnixNano())
 	customRand := rand.New(rand.NewSource(time.Now().UnixNano()))
 	diceCheck := dice.NewDice(customRand)
 	rollResult := diceCheck.Roll()
