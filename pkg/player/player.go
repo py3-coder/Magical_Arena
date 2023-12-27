@@ -10,7 +10,7 @@ type LocalPlayer struct {
 
 // Creating New Player with given attributes :
 func NewPlayer(health, strength, attack int) *models.Player {
-	return &models.Player{health, strength, attack}
+	return &models.Player{Health: health, Strength: strength, Attack: attack}
 }
 
 // NewLocalPlayer creates a new LocalPlayer by embedding a Player with the given attributes.

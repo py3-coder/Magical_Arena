@@ -6,7 +6,3 @@ type Player struct {
 	Strength int
 	Attack   int
 }
-
-type PointerPlayer struct {
-	Player *Player
-}
