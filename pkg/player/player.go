@@ -1,32 +1,31 @@
 package player
 
-import (
-	"magical-arena/models"
-)
-
-type LocalPlayer struct {
-	*models.Player
+// Player Struct represents a player in the Magical Arena.
+type Player struct {
+	Health   int
+	Strength int
+	Attack   int
 }
 
 // Creating New Player with given attributes :
-func NewPlayer(health, strength, attack int) *models.Player {
-	return &models.Player{Health: health, Strength: strength, Attack: attack}
-}
-
-// NewLocalPlayer creates a new LocalPlayer by embedding a Player with the given attributes.
-func NewLocalPlayer(health, strength, attack int) *LocalPlayer {
-	return &LocalPlayer{NewPlayer(health, strength, attack)}
+func NewPlayer(health, strength, attack int) *Player {
+	return &Player{Health: health, Strength: strength, Attack: attack}
 }
 
 // IsAlive Check Player is still alive :
-func (lp *LocalPlayer) IsAlive() bool {
-	return lp.Health > 0
+func (player *Player) IsAlive() bool {
+	return player.Health > 0
+}
+
+// IsAlive Check Player is still alive :
+func (player *Player) GetHealth() int {
+	return player.Health
 }
 
 // ReduceHealth reduces the player's health by the specified amount.
-func (lp *LocalPlayer) ReduceHealth(damage int) {
-	lp.Health -= damage
-	if lp.Health < 0 {
-		lp.Health = 0
+func (player *Player) ReduceHealth(damage int) {
+	player.Health -= damage
+	if player.Health < 0 {
+		player.Health = 0
 	}
 }

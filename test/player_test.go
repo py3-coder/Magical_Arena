@@ -7,7 +7,7 @@ import (
 
 // Test Reduece Health :
 func TestReduceHealth(t *testing.T) {
-	player1 := player.NewLocalPlayer(50, 5, 10)
+	player1 := player.NewPlayer(50, 5, 10)
 	player1.ReduceHealth(20)
 
 	if player1.Health != 30 {
@@ -17,8 +17,8 @@ func TestReduceHealth(t *testing.T) {
 
 // Test IsAlive  :
 func TestIsAlive(t *testing.T) {
-	alivePlayer := player.NewLocalPlayer(30, 5, 10)
-	deadPlayer := player.NewLocalPlayer(0, 5, 10)
+	alivePlayer := player.NewPlayer(30, 5, 10)
+	deadPlayer := player.NewPlayer(0, 5, 10)
 
 	if !alivePlayer.IsAlive() {
 		t.Error("Expected alivePlayer to be alive")

@@ -1,26 +1,20 @@
 package dice
 
 import (
-	"magical-arena/models"
 	"math/rand"
-	"time"
 )
 
-type LocalDiceModel struct {
-	*models.Dice
+// Dice Struct Represents a six-sided die
+type Dice struct {
+	Random *rand.Rand
 }
 
 // NewDice creates a new six-sided die.
-func NewDice() *models.Dice {
-	return &models.Dice{Random: rand.New(rand.NewSource(time.Now().UnixNano()))}
-}
-
-// NewLocalDice creates a new LocalDice by embedding.
-func NewLocalDice() *LocalDiceModel {
-	return &LocalDiceModel{NewDice()}
+func NewDice(r *rand.Rand) *Dice {
+	return &Dice{Random: r}
 }
 
 // Roll simulates a die roll and returns the result.
-func (d *LocalDiceModel) Roll() int {
-	return d.Dice.Random.Intn(6) + 1
+func (d *Dice) Roll() int {
+	return d.Random.Intn(6) + 1
 }
